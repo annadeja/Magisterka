@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a324490159834ec43aa0ba27e194951a, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  Connections:
+  - NodeGuid: b9f76002-b6ef-44cc-b5f3-d8d131622558
+    PortName: root
+    TargetGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+  - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+    PortName: New response 1
+    TargetGuid: 96bf4350-83a9-4127-adc3-70afd10d57cd
+  - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+    PortName: New response 2
+    TargetGuid: cfb9e169-60d8-4482-9fa5-aabda29fb3cc
+  - NodeGuid: 52f70fb2-b0ab-4522-b17b-0fea21362b09
+    PortName: Continue
+    TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+  - NodeGuid: cfb9e169-60d8-4482-9fa5-aabda29fb3cc
+    PortName: Continue
+    TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+  - NodeGuid: 96bf4350-83a9-4127-adc3-70afd10d57cd
+    PortName: Continue.
+    TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+  - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+    PortName: New response 3
+    TargetGuid: 52f70fb2-b0ab-4522-b17b-0fea21362b09
+  NodeData:
+  - Guid: 96bf4350-83a9-4127-adc3-70afd10d57cd
+    DialogLine: Test 1
+    Speaker: DUMMY
+    ExitLine: 
+    Position: {x: 752, y: -34}
+    OutputPorts:
+    - NodeGuid: 96bf4350-83a9-4127-adc3-70afd10d57cd
+      PortName: Continue.
+      TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 52f70fb2-b0ab-4522-b17b-0fea21362b09
+    DialogLine: Test 3
+    Speaker: DUMMY
+    ExitLine: 
+    Position: {x: 752, y: 502}
+    OutputPorts:
+    - NodeGuid: 52f70fb2-b0ab-4522-b17b-0fea21362b09
+      PortName: Continue
+      TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+    DialogLine: Test 0
+    Speaker: DUMMY
+    ExitLine: 
+    Position: {x: 335, y: 199}
+    OutputPorts:
+    - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+      PortName: New response 1
+      TargetGuid: 96bf4350-83a9-4127-adc3-70afd10d57cd
+    - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+      PortName: New response 2
+      TargetGuid: cfb9e169-60d8-4482-9fa5-aabda29fb3cc
+    - NodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f
+      PortName: New response 3
+      TargetGuid: 52f70fb2-b0ab-4522-b17b-0fea21362b09
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: cfb9e169-60d8-4482-9fa5-aabda29fb3cc
+    DialogLine: Test2
+    Speaker: DUMMY
+    ExitLine: 
+    Position: {x: 762, y: 224}
+    OutputPorts:
+    - NodeGuid: cfb9e169-60d8-4482-9fa5-aabda29fb3cc
+      PortName: Continue
+      TargetGuid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 5f2fbc55-b046-4189-ae82-1d6b867fc365
+    DialogLine: End.
+    Speaker: DUMMY
+    ExitLine: 
+    Position: {x: 1153, y: 224}
+    OutputPorts: []
+    IsChoice: 0
+    IsLeaf: 1
+    IsEnding: 0
+    ChoiceOutcomes: []
+  FirstNodeGuid: 1bb3b9a8-1084-461a-9c6a-f5e1f0b9ed4f

@@ -53,21 +53,23 @@
     <UnityVersion>2021.3.5f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\OutOfScope\SpeakerBehavior.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogData\NarrativePath.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\Menus\MenuController.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\ChoiceData.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\Menus\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogContainer.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\EndingController.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveData.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeDataContainer.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogData\NarrativePath.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\GraphIO.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\SaveData\CharacterData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeConnection.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeGraph.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\GraphIO.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogContainer.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeDataContainer.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogNode.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeView.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\SaveData\CharacterData.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\MainMenuController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogNode.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\Menus\GameplayMenuController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

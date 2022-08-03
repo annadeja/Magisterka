@@ -1,8 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,21 +9,23 @@ public class SaveDataController : MonoBehaviour
     private static SaveDataController instance; //!<Instancja klasy.
     public SaveData LoadedSave { get; set; } //!<Obecnie wczytany zapis gry.
     public string FilePath { get; set; } //!<Ścieżka do zapisu lub wczytania pliku stanu gry.
-    private string dialogPosition; //!<Pozycja gracza na drzewie dialogowym.
-    private GameObject player; //!<Obiekt gracza.
+    public string DialogPosition { get; set; } //!<Pozycja gracza na drzewie dialogowym.
+    private GameObject dialog; //!<Obiekt gracza.
     private bool justLoaded = false; //!<Określa czy właśnie wczytano nową scenę.
 
     void Update()
     {
         if (justLoaded) //Jeżeli dopiero co wczytano zapis gry, to skrypt odnajduje obiekt gracza zawarty w scenie i dopasowuje jego pozycję do tej zapisanej.
         {
-            player = GameObject.Find("Player");
-            if (player)
+            dialog = GameObject.Find("DialogController");
+            if (dialog)
             {
-                Transform transform = player.GetComponentInChildren<Transform>();
-                player.SetActive(false);
+                //Transform transform = player.GetComponentInChildren<Transform>();
+                //player.SetActive(false);
                 //transform.position = playerPosition;
-                player.SetActive(true);
+                //player.SetActive(true);
+                DialogController dialogController = dialog.GetComponentInChildren<DialogController>();
+                dialogController.loadNode(LoadedSave.DialogPosition);
                 justLoaded = false;
             }
         }
@@ -47,6 +46,7 @@ public class SaveDataController : MonoBehaviour
     public void updateSaveData() 
     {
         LoadedSave.LastLocation = SceneManager.GetActiveScene().name;
+        LoadedSave.DialogPosition = DialogPosition;
         //LoadedSave.PlayerPosition[0] = player.transform.position.x;
         //LoadedSave.PlayerPosition[1] = player.transform.position.y;
         //LoadedSave.PlayerPosition[2] = player.transform.position.z;
@@ -75,8 +75,8 @@ public class SaveDataController : MonoBehaviour
     //!Wczytuje zapis gry.
     public void load() 
     {
-        SceneManager.LoadScene(LoadedSave.LastLocation);
-        //playerPosition = new Vector3(LoadedSave.PlayerPosition[0], LoadedSave.PlayerPosition[1], LoadedSave.PlayerPosition[2]);
+        //SceneManager.LoadScene(LoadedSave.LastLocation);
+        DialogPosition = LoadedSave.DialogPosition;
         justLoaded = true;
     }
     //!Zapisuje pojedynczy wybór gracza.

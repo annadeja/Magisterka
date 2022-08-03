@@ -38,7 +38,7 @@ public class EndingController: MonoBehaviour
     //!Wyświetla zakończenie.
     public void displayEnding() 
     {
-        SpeakerBehavior endingBehavior = endingSpeaker.GetComponent<SpeakerBehavior>();
+        DialogController endingBehavior = endingSpeaker.GetComponent<DialogController>();
         if (revolutionEnding)
         {
             revolutionCanvas.SetActive(true);
