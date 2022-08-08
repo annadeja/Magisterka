@@ -1728,13 +1728,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 675755241}
-  textDelay: 0.1
+  textDelay: 0.025
   choiceButtons:
   - {fileID: 874836113}
   - {fileID: 781927048}
   - {fileID: 33675257}
   dialogTrees:
-  - {fileID: 11400000, guid: aaca768df7b6f7c48a46815fe9a149ae, type: 2}
+  - {fileID: 11400000, guid: 2ed6ffef4682941459d7232a27c278c5, type: 2}
 --- !u!4 &603676860
 Transform:
   m_ObjectHideFlags: 0
@@ -1808,7 +1808,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dummy text.
+  m_text: Dummy text. Something must have gone horribly wrong for you to see this.
+    Please report this error to Laxe if able.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 36927462411ec3c489860fda73b64999, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 36927462411ec3c489860fda73b64999, type: 2}
@@ -1842,7 +1843,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

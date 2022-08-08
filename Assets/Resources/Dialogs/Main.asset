@@ -1,0 +1,823 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a324490159834ec43aa0ba27e194951a, type: 3}
+  m_Name: Main
+  m_EditorClassIdentifier: 
+  Connections:
+  - NodeGuid: 06528905-15fc-442a-86cc-0292e43c86a9
+    PortName: root
+    TargetGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+  - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+    PortName: Try seeing out the window.
+    TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+  - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+    PortName: Examine the room for food.
+    TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+  - NodeGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    PortName: Continue
+    TargetGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+  - NodeGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    PortName: Continue
+    TargetGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+  - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+    PortName: Try seeing out the window.
+    TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+  - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+    PortName: Examine the room for food.
+    TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+  - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+    PortName: Exit out the door.
+    TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+  - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    PortName: Go left.
+    TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+  - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    PortName: Go right.
+    TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+  - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    PortName: Go back.
+    TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+  - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    PortName: Go back.
+    TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+  - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    PortName: Open the door.
+    TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+  - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    PortName: Enter through the open door.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    PortName: Examine the sign.
+    TargetGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+  - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    PortName: Go back.
+    TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+  - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    PortName: Go back.
+    TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+  - NodeGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+    PortName: Step back.
+    TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+  - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    PortName: Enter through the open door.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    PortName: Go back.
+    TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+  - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    PortName: Enter through the closed door.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+    PortName: Enter through the closed door.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    PortName: Exit the crapper.
+    TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+  - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    PortName: Use the toilet.
+    TargetGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+  - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    PortName: Wash your hands.
+    TargetGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+  - NodeGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+    PortName: Flush the toilet.
+    TargetGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+  - NodeGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+    PortName: Flush it again.
+    TargetGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+  - NodeGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+    PortName: Approach the sink.
+    TargetGuid: c2fb4dbe-85f2-44db-b548-f6e51f879da7
+  - NodeGuid: c2fb4dbe-85f2-44db-b548-f6e51f879da7
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+    PortName: A G A I N.
+    TargetGuid: 9a98ed87-eef5-46a8-b7ce-69d4ac4f1fd0
+  - NodeGuid: 9a98ed87-eef5-46a8-b7ce-69d4ac4f1fd0
+    PortName: Step back.
+    TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+  - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    PortName: Check the laptop.
+    TargetGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+  - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    PortName: Check the bookshelf.
+    TargetGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+  - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    PortName: '"What the Government Doesn''t Want You to Know About Space"'
+    TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+  - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+    TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+  - NodeGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+    PortName: Look around for a power cable.
+    TargetGuid: eccbd6d3-7d4f-4021-85bf-0ca7108f58c3
+  - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+    PortName: Look around for a spare battery.
+    TargetGuid: 6e6ae6fe-f035-4537-b695-9e5dffbbcc30
+  - NodeGuid: 6e6ae6fe-f035-4537-b695-9e5dffbbcc30
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: eccbd6d3-7d4f-4021-85bf-0ca7108f58c3
+    PortName: Step back.
+    TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+  - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    PortName: Check the windows.
+    TargetGuid: 78c6ae83-b39d-4dba-b1c5-97022667bd84
+  - NodeGuid: 78c6ae83-b39d-4dba-b1c5-97022667bd84
+    PortName: Step back.
+    TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+  - NodeGuid: eb82050e-4ff3-4d2e-b647-33743e71692f
+    PortName: Step back.
+    TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+  - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    PortName: Lie on the bed.
+    TargetGuid: f7b58910-7d10-49b3-b471-c669538110c7
+  - NodeGuid: f7b58910-7d10-49b3-b471-c669538110c7
+    PortName: Pass out in a deranged fashion.
+    TargetGuid: eb82050e-4ff3-4d2e-b647-33743e71692f
+  - NodeGuid: f7b58910-7d10-49b3-b471-c669538110c7
+    PortName: Go back and explore the rest of this strange place.
+    TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+  NodeData:
+  - Guid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    DialogLine: The blinds might as well be metal bars fused into the window as they
+      refuse to budge no matter what you try. The red light sears into your eyes.
+      The window stubbornly refuses to move as well.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 2969, y: -97}
+    OutputPorts:
+    - NodeGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+      PortName: Continue
+      TargetGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    DialogLine: No food in sight, even the refrigerator is empty. All this searching
+      only leaves you with a craving. You feel as though you could use some strawberry
+      ice cream, despite not feeling any hunger.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 2969, y: 550}
+    OutputPorts:
+    - NodeGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+      PortName: Continue
+      TargetGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: c552d89b-a012-4f78-8324-dd358fac5e53
+    DialogLine: The room remains creepy. What will you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 4348, y: 167}
+    OutputPorts:
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Try seeing out the window.
+      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Examine the room for food.
+      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Exit out the door.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    DialogLine: You find yourself in the middle of a long corridor. As you look around,
+      each end seems to be too dark to discern what lies ahead. Where will you go?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 5049, y: 224}
+    OutputPorts:
+    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+      PortName: Go left.
+      TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+      PortName: Go right.
+      TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    DialogLine: You come across two doors - one open, one seemingly closed. The closed
+      door appears to have a sign attached to it. What will you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 6236, y: -10}
+    OutputPorts:
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Go back.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Enter through the open door.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Examine the sign.
+      TargetGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    DialogLine: The corridor seems to lighten up as you continue walking, despite
+      no lamps or windows being present. Eventually, you reach the end only to find
+      a single door. Despite being closed, you cannot shake off the feeling that
+      it is in fact the source of the light present in the corridor. This door beckons
+      you.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 6236, y: 482}
+    OutputPorts:
+    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+      PortName: Go back.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+      PortName: Open the door.
+      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+    DialogLine: As you get closer, you start to make out the sign. It features a
+      circle and an inverted triangle right next to each other. You have no idea
+      what it could possibly mean.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 7545, y: 107}
+    OutputPorts:
+    - NodeGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+      PortName: Step back.
+      TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    - NodeGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+      PortName: Enter through the closed door.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    DialogLine: The doors seem to be inviting you over.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 9398, y: 131}
+    OutputPorts:
+    - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+      PortName: Enter through the open door.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+      PortName: Go back.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    - NodeGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+      PortName: Enter through the closed door.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    DialogLine: You enter a room with both its walls and floor covered in ceramic
+      tiles. A pure white seat bares its jaw, as if demanding to be called a "throne".
+      A lone sink hangs from a perpendicular wall, only a towel and a bottle of soap
+      keeping it company. You can see a strange mark on the wall right above, as
+      if something has been hanging there, but was taken away. The less sophisticated
+      could call this place a "crapper". You are one of those people.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 10133, y: -34}
+    OutputPorts:
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Exit the crapper.
+      TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Use the toilet.
+      TargetGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Wash your hands.
+      TargetGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+    DialogLine: You flushed the toilet.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 14273, y: -310}
+    OutputPorts:
+    - NodeGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    - NodeGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+      PortName: Flush it again.
+      TargetGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: c2fb4dbe-85f2-44db-b548-f6e51f879da7
+    DialogLine: You use the pump attached to the small bottle to put a little bit
+      of soap on your left hand. You turn on the faucet and wash your hands in cool
+      water. Your hands feel fresher, but somehow so does your head.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 14749, y: 131}
+    OutputPorts:
+    - NodeGuid: c2fb4dbe-85f2-44db-b548-f6e51f879da7
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+    DialogLine: Congratulations. You feel a part of yourself going down the drain.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 14784, y: -321}
+    OutputPorts:
+    - NodeGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    - NodeGuid: 41736e00-eb8f-4071-aca2-8e25cba4dd8b
+      PortName: A G A I N.
+      TargetGuid: 9a98ed87-eef5-46a8-b7ce-69d4ac4f1fd0
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: A G A I N.
+      ChoiceTitle: Flushed three times
+      WasMade: 1
+      WasFailed: 0
+      Path: 2
+      ChoicePoints: 2
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+  - Guid: 9a98ed87-eef5-46a8-b7ce-69d4ac4f1fd0
+    DialogLine: You flush the toilet for the third time. The shiny button dulls,
+      no longer appearing inviting. As you blink, you swear that you can see its
+      teeth.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 15515, y: -310}
+    OutputPorts:
+    - NodeGuid: 9a98ed87-eef5-46a8-b7ce-69d4ac4f1fd0
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 6e6ae6fe-f035-4537-b695-9e5dffbbcc30
+    DialogLine: 'You take a cursory glance at your surroundings. You check any shelves
+      and drawers around you. There is no spare battery. And why would there be?
+      It is highly likely that any replacement you would find would also hold no
+      charge. '
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 12028, y: -734}
+    OutputPorts:
+    - NodeGuid: 6e6ae6fe-f035-4537-b695-9e5dffbbcc30
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: eccbd6d3-7d4f-4021-85bf-0ca7108f58c3
+    DialogLine: You take a cursory glance at your surroundings. You check any shelves
+      and drawers around you. There is no power cable and in fact, no outlet to even
+      plug one in. This puzzles you. Wouldn't energy be necessary for a study? You
+      begin to wonder how the lamp above you is able to function.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 11988, y: -370}
+    OutputPorts:
+    - NodeGuid: eccbd6d3-7d4f-4021-85bf-0ca7108f58c3
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+    DialogLine: "You have no idea what \"crushing your health goals\" means or how
+      exactly would achieving it be made easier via \"counterintuitive tips\". It
+      is that curiosity that draws you to pick up the book. Despite the book's sizeable
+      girth, the length of the text contained inside seems to be no more than what
+      you would find in an average internet article. Inside you see a technicolor
+      feast of shades that absolutely do not go together. The text seems to be formatted
+      as a top 13 list indeed, with each entry getting progressively unhinged. You
+      have a hard time deciphering whether the article is genuine or ironic. Entry
+      #9 features an ice fairy run over by a motorcycle on fire with the caption
+      \"COLD OUTSIDE? SMASH YOUR SENSE OF THERMOREGULATION WITH A HONDA\xAE SUPER
+      CUB C125!!\". You feel as though you have lost braincells reading this. You
+      can almost see the smoke coming out of your head."
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 13565, y: -922}
+    OutputPorts:
+    - NodeGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 78c6ae83-b39d-4dba-b1c5-97022667bd84
+    DialogLine: You walk up to the left window expecting to get a glimpse of where
+      the hell you could possibly be. Or to perhaps experience a single ray of sunshine.
+      Your mind helpfully supplies how rare of a resource it seems to be lately.
+      Eventually you get close enough to look out the window. You see... essentially
+      nothing. It is quite difficult to describe what you do actually see. It registers
+      to you as some sort of strange hybrid between an overcast sky and an out of
+      bounds area in a video game. No matter which angle you look out from, you cannot
+      see the walls of the building you must be in, nor the ground. You decide not
+      to dwell on the implications. You think that you could perhaps open the window
+      to get a taste of fresh air, as a treat. But no. The window refuses to budge,
+      no matter the herculean strength you put into your attempts, much like the
+      one in the room you woke up in. Your disappointment is immeasurable and your
+      day is ruined, even more than it already was.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 12393, y: 389}
+    OutputPorts:
+    - NodeGuid: 78c6ae83-b39d-4dba-b1c5-97022667bd84
+      PortName: Step back.
+      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+    DialogLine: 'Space. That is always neat to think about, correct? You wish this
+      piece of literature was about that. Despite the book''s sizeable girth, the
+      length of the text contained inside seems to be no more than what you would
+      find in an average internet article. Inside, the author seems to immediately
+      go on a tangent, babbling about having to pay taxes. Or something. You fail
+      to understand half of the terminology that the author uses. While not exactly
+      a worthwhile read, the article seems to have stirred something in your memory. '
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 13565, y: -1218}
+    OutputPorts:
+    - NodeGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+    DialogLine: You have a feeling that splashing a little bit of water onto your
+      body might help you focus on your predicament a bit. The sensation of cold
+      water on your skin might even help you remember how you ended up here in the
+      first place.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 13044, y: 83}
+    OutputPorts:
+    - NodeGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    - NodeGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+      PortName: Approach the sink.
+      TargetGuid: c2fb4dbe-85f2-44db-b548-f6e51f879da7
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: Approach the sink.
+      ChoiceTitle: Washed hands
+      WasMade: 1
+      WasFailed: 0
+      Path: 3
+      ChoicePoints: 2
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+  - Guid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    DialogLine: As you approach the bookshelf you expect to be hit with a vile cloud
+      of grime. To your surprise however, the shelves seem to be ostensibly spotless.
+      You check the titles lining the shelves. You would expect an assortment comprised
+      of classical literature with encyclopedias and other non-fiction sprinkled
+      in. Instead of that, the spine of each book is labelled with titles befitting
+      the most masterful of clickbait sites, of which at least 10 you suspect are
+      about strangely shaped cakes. Two titles seem to catch your eye. Which do you
+      choose?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 9989, y: -1101}
+    OutputPorts:
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      ChoiceTitle: Read the space book
+      WasMade: 1
+      WasFailed: 0
+      Path: 3
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      ChoiceTitle: Read the tip book
+      WasMade: 1
+      WasFailed: 0
+      Path: 2
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+  - Guid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+    DialogLine: You open up the laptop. A cloud of dust hits your face as lift the
+      screen upwards, momentarily irritating your eyes. You try powering on the computer,
+      but to no avail, the battery seems to be flat. You wonder about how to go about
+      accessing the treasures that might lie inside.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 10079, y: -353}
+    OutputPorts:
+    - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+      PortName: Look around for a power cable.
+      TargetGuid: eccbd6d3-7d4f-4021-85bf-0ca7108f58c3
+    - NodeGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+      PortName: Look around for a spare battery.
+      TargetGuid: 6e6ae6fe-f035-4537-b695-9e5dffbbcc30
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: Look around for a power cable.
+      ChoiceTitle: Looked for cable
+      WasMade: 1
+      WasFailed: 0
+      Path: 3
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: Look around for a spare battery.
+      ChoiceTitle: Looked for battery
+      WasMade: 1
+      WasFailed: 0
+      Path: 2
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+  - Guid: 63eadc22-e967-47f9-a337-640414f23a9f
+    DialogLine: You enter what appears to be some sort of a study. A dusty desk sits
+      in the middle of the room, accompanies by a dingy office chair. An old laptop
+      sits atop the desk, closed and unplugged. A bookshelf similarly caked with
+      dust stands tall against the wall right behind the desk. The room seems to
+      be devoid of any sort of ornamentation with its painfully beige walls and gray
+      linoleum.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 7546, y: -325}
+    OutputPorts:
+    - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+      PortName: Go back.
+      TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+      PortName: Check the laptop.
+      TargetGuid: cb963dda-be8b-42d6-8dfe-0ff396efae54
+    - NodeGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+      PortName: Check the bookshelf.
+      TargetGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 2220fbb4-f27b-4a47-a521-041934d1226d
+    DialogLine: You feel no need to make use of the services the throne provides.
+      However, a shiny button twinkles in the artificial light, as if beckoning you.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 13044, y: -204}
+    OutputPorts:
+    - NodeGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+      PortName: Step back.
+      TargetGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    - NodeGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+      PortName: Flush the toilet.
+      TargetGuid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    DialogLine: You touch the door handle expecting some resistance, but it turns
+      downward as if animated by something other than your motion. As soon as the
+      door opens, your eyes are flooded with illumination they have already adjusted
+      not to receive. After a few blinks you find yourself able to see again. What
+      lies ahead of you is a typical bedroom. A single bed is nested in the corner,
+      with a frame build out of cheap plywood supporting a dingy mattress. A lone
+      closet made out of chipboards in clashing colors sits on the opposite side
+      of the room. It takes you an embarrassing time to notice the two bare windows
+      on the wall directly in front of you, providing a steady stream of light to
+      the area.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 8289, y: 482}
+    OutputPorts:
+    - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+      PortName: Go back.
+      TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+      PortName: Check the windows.
+      TargetGuid: 78c6ae83-b39d-4dba-b1c5-97022667bd84
+    - NodeGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+      PortName: Lie on the bed.
+      TargetGuid: f7b58910-7d10-49b3-b471-c669538110c7
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+    DialogLine: You wake up in a dark room, alight with red coming through the small
+      slits of the window blinds. The dark chamber you find yourself in resembles
+      a hotel room kitchenette, only without the rest of the room. Except for the
+      window, there is only one entrance. You slowly stand up from a chair you find
+      yourself seated in and shake off the grogginess. You head throbs, as though
+      someone hit it with a baseball bat. What do you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 336, y: 200}
+    OutputPorts:
+    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+      PortName: Try seeing out the window.
+      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+      PortName: Examine the room for food.
+      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: f7b58910-7d10-49b3-b471-c669538110c7
+    DialogLine: Going around this, for the lack of a better term, place has made
+      you a bit tired. Having a nap does not seem like the worst idea right now and
+      your body happily agrees. The more rational side of your mind supplies you
+      with concerns of safety that come with sleeping in a strange place you suddenly
+      plopped into, one that may very well seem to be devoid of other people, but
+      does in fact contain someone out to get you and- Your drowsiness however overrides
+      that train of thought and makes it clear that if you decide to plunge in, you
+      might not wake up for long.EXT.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 12393, y: 736}
+    OutputPorts:
+    - NodeGuid: f7b58910-7d10-49b3-b471-c669538110c7
+      PortName: Pass out in a deranged fashion.
+      TargetGuid: eb82050e-4ff3-4d2e-b647-33743e71692f
+    - NodeGuid: f7b58910-7d10-49b3-b471-c669538110c7
+      PortName: Go back and explore the rest of this strange place.
+      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Go back and explore the rest of this strange place.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: Pass out in a deranged fashion.
+      ChoiceTitle: Ending
+      WasMade: 1
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 1
+      RequiredPreserve: 1
+  - Guid: eb82050e-4ff3-4d2e-b647-33743e71692f
+    DialogLine: As you sit down on the bed you fail to find a decent enough reason
+      as to why you should be lying around in bed while you have not actually done
+      anything yet. You cannot afford to be lazy when you have no idea where the
+      hell you are, how you ended up here and for what reason. At least it is good
+      to know that this hellhole has a place to rest if need be. You file that information
+      for later.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 15844, y: 1083}
+    OutputPorts:
+    - NodeGuid: eb82050e-4ff3-4d2e-b647-33743e71692f
+      PortName: Step back.
+      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  FirstNodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b

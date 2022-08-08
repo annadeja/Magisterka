@@ -20,10 +20,6 @@ public class SaveDataController : MonoBehaviour
             dialog = GameObject.Find("DialogController");
             if (dialog)
             {
-                //Transform transform = player.GetComponentInChildren<Transform>();
-                //player.SetActive(false);
-                //transform.position = playerPosition;
-                //player.SetActive(true);
                 DialogController dialogController = dialog.GetComponentInChildren<DialogController>();
                 dialogController.loadNode(LoadedSave.DialogPosition);
                 justLoaded = false;
@@ -47,9 +43,6 @@ public class SaveDataController : MonoBehaviour
     {
         LoadedSave.LastLocation = SceneManager.GetActiveScene().name;
         LoadedSave.DialogPosition = DialogPosition;
-        //LoadedSave.PlayerPosition[0] = player.transform.position.x;
-        //LoadedSave.PlayerPosition[1] = player.transform.position.y;
-        //LoadedSave.PlayerPosition[2] = player.transform.position.z;
     }
     //!Wczytuje zapis gry z pliku.
     public void loadSaveFile() 
@@ -80,30 +73,45 @@ public class SaveDataController : MonoBehaviour
         justLoaded = true;
     }
     //!Zapisuje pojedynczy wybór gracza.
-    public void saveChoice(NodeDataContainer currentNode, int i) 
+    public bool saveChoice(NodeDataContainer currentNode, int i) 
     {
         string portName = currentNode.OutputPorts[i].PortName;
         ChoiceData choiceData = currentNode.ChoiceOutcomes.Find(x => x.PortName == portName);
         //choiceData.skillCheck(LoadedSave.PlayerStats);
+        skillCheck(choiceData);
+        if (!choiceData.WasFailed && choiceData.ChoiceTitle == "Ending")
+            return true;
+        foreach (ChoiceData choice in LoadedSave.PastChoices)
+            if (choiceData.ChoiceTitle == choice.ChoiceTitle)
+                return false;
         LoadedSave.PastChoices.Add(choiceData);
         identifyChoicePath(choiceData);
+        return false;
     }
     //!Sprawdza do jakiej ścieżki przynależy dany wybór i inkrementuje odpowiadający mu licznik.
     private void identifyChoicePath(ChoiceData choiceData)
     {
         if (choiceData.Path == NarrativePath.Conform)
-            LoadedSave.ConformChoices++;
+            LoadedSave.ConformChoices+= choiceData.ChoicePoints;
         else if (choiceData.Path == NarrativePath.Rebel)
-            LoadedSave.RebelChoices++;
+            LoadedSave.RebelChoices+= choiceData.ChoicePoints;
         else if (choiceData.Path == NarrativePath.Reset)
-            LoadedSave.ResetChoices++;
+            LoadedSave.ResetChoices+= choiceData.ChoicePoints;
         else if (choiceData.Path == NarrativePath.Preserve)
-            LoadedSave.PreserveChoices++;
+            LoadedSave.PreserveChoices+= choiceData.ChoicePoints;
     }
-
+    //!Sprawdza czy gracz posiada wystarczająco wysoki poziom umiejętności by dokonać danego wyboru.
+    public void skillCheck(ChoiceData choiceData)
+    {
+        if ((LoadedSave.ConformChoices >= choiceData.RequiredConform || LoadedSave.RebelChoices >= choiceData.RequiredRebel)
+            && (LoadedSave.ResetChoices >= choiceData.RequiredReset || LoadedSave.PreserveChoices >= choiceData.RequiredPreserve))
+            choiceData.WasFailed = false;
+        else
+            choiceData.WasFailed = true;
+    }
     //!Wczytuje sekwencję zakończenia gry.
     public void loadEnding()
     {
-        SceneManager.LoadScene("Ending");
+        SceneManager.LoadScene("EndingScene");
     }
 }

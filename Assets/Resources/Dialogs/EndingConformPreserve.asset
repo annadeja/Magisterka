@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a324490159834ec43aa0ba27e194951a, type: 3}
+  m_Name: EndingConformPreserve
+  m_EditorClassIdentifier: 
+  Connections:
+  - NodeGuid: 34cc3984-ffc2-48b9-98e2-eed0c00a5ee1
+    PortName: root
+    TargetGuid: 21abfaa0-2389-4553-978d-ec4e40389f92
+  - NodeGuid: 21abfaa0-2389-4553-978d-ec4e40389f92
+    PortName: Continue.
+    TargetGuid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
+  - NodeGuid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
+    PortName: Continue.
+    TargetGuid: f564094a-42db-4ecb-bdd5-a7d944b55962
+  - NodeGuid: f564094a-42db-4ecb-bdd5-a7d944b55962
+    PortName: Continue.
+    TargetGuid: 0b86ce98-5fdd-4113-a12b-a9d079b0de06
+  NodeData:
+  - Guid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
+    DialogLine: Indeed, the weightless never comes. Instead, you feel your body becoming
+      more corporeal, more solid, more real with each passing second. It is only
+      now that it comes to your attention how light you previously felt. You realize
+      that the body you now inhabit is unfamiliar. Just a moment ago you were a gray
+      blob, but never registered it. Or perhaps you did not want to.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 3001, y: 200}
+    OutputPorts:
+    - NodeGuid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
+      PortName: Continue.
+      TargetGuid: f564094a-42db-4ecb-bdd5-a7d944b55962
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 21abfaa0-2389-4553-978d-ec4e40389f92
+    DialogLine: The bed feels quite uneven and the bumps hurt your back. You seem
+      unfazed by it however, as if the feeling is familiar, even comforting in some
+      strange sense. It does not take you long to drift off into a light sleep. You
+      wait for that floaty, weightless feeling you associate with dreaming, which
+      you oh so adore. As always, you never get what you want. You never could.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 487, y: 200}
+    OutputPorts:
+    - NodeGuid: 21abfaa0-2389-4553-978d-ec4e40389f92
+      PortName: Continue.
+      TargetGuid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: f564094a-42db-4ecb-bdd5-a7d944b55962
+    DialogLine: The tangibility of your new (or perhaps old?) body begins to hurt
+      now. A sudden swarm of odd aches and other sensations begin to feed into your
+      mind. A mosquito bite on your leg, an aching wrist, a dull pounding in your
+      head, a lingering hunger - it all starts pouring in. You find no way to politely
+      ask for it to stop. Your eyelids slowly flutter open.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 5509, y: 200}
+    OutputPorts:
+    - NodeGuid: f564094a-42db-4ecb-bdd5-a7d944b55962
+      PortName: Continue.
+      TargetGuid: 0b86ce98-5fdd-4113-a12b-a9d079b0de06
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 0b86ce98-5fdd-4113-a12b-a9d079b0de06
+    DialogLine: A thin line of moisture wakes you up. A brief haze of confusion surrounds
+      your vision before it is swiftly dispelled by a sudden realization. The realization
+      that you remember. You remember what happened. You remember what you were trying
+      to do. You sought to remove what you were so hard that you lost sight that
+      you never really wanted this in the first place. You were never a lost cause.
+      You were never doomed to fail and rot. Tears may cloud your vision, but they
+      are a show of clarity, not of muddiness. In the end, not much has changed.
+      The problems you would face will still plague you, the issues lingering for
+      years will still bother you. But now, at the very least, you, your essence
+      does not seem so set in stone. For the first time in forever, there is hope.
+      And you will cherish it.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 7977, y: 200}
+    OutputPorts: []
+    IsChoice: 0
+    IsLeaf: 1
+    IsEnding: 0
+    ChoiceOutcomes: []
+  FirstNodeGuid: 21abfaa0-2389-4553-978d-ec4e40389f92

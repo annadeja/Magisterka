@@ -11,6 +11,7 @@ public class ChoiceData
     public bool WasMade; //!<Czy wyboru dokonano?
     public bool WasFailed; //!<Czy wybór był nieudany?
     public NarrativePath Path; //!<Ścieżka fabularna do jakiej przynależy wybór.
+    public int ChoicePoints; //!Waga danego wyboru.
     public int RequiredConform; //!<Wymagana liczba punktów sprzyjania.
     public int RequiredRebel; //!<Wymagana liczba punktów zaprzeczenia.
     public int RequiredReset; //!<Wymagana liczba punktów resetu.
@@ -23,15 +24,10 @@ public class ChoiceData
         this.WasMade = wasMade;
         this.Path = NarrativePath.None;
         WasFailed = false;
+        ChoicePoints = 1;
         RequiredConform = 0;
         RequiredRebel = 0;
         RequiredReset = 0;
         RequiredPreserve = 0;
     }
-    //!Sprawdza czy gracz posiada wystarczająco wysoki poziom umiejętności by dokonać danego wyboru.
-    //public void skillCheck(CharacterStats playerStats)
-    //{
-    //    if (!(playerStats.Charisma >= RequiredConform && playerStats.Deception >= RequiredRebel))
-    //        WasFailed = true;
-    //}
 }

@@ -27,6 +27,7 @@ public class DialogNode: Node
     private TextField lineLabel;
 
     private TextField choiceName;
+    private TextField choicePoints;
     private TextField conformField;
     private TextField rebelField;
     private TextField resetField;
@@ -180,6 +181,8 @@ public class DialogNode: Node
                 narrativeType.value = false;
         }
 
+        choicePoints.value = choiceData.ChoicePoints.ToString();
+        choicePoints.RegisterCallback<InputEvent, ChoiceData>(setChoicePoints, choiceData);
         conformField.value = choiceData.RequiredConform.ToString();
         conformField.RegisterCallback<InputEvent, ChoiceData>(setConformRequirement, choiceData);
         rebelField.value = choiceData.RequiredRebel.ToString();
@@ -275,16 +278,25 @@ public class DialogNode: Node
         makesChoice.text = "Makes a choice?";
         makesChoice.value = true;
 
+        choicePoints = new TextField();
         conformField = new TextField();
         rebelField = new TextField();
+        resetField = new TextField();
+        preserveField = new TextField();
+        choicePoints.label = "Narrative points awarded for the choice:";
         conformField.label = "Conform point requirement:";
         rebelField.label = "Rebel point requirement:";
+        resetField.label = "Reset point requirement:";
+        preserveField.label = "Preserve point requirement:";
 
         foldout.contentContainer.Add(makesChoice);
         foldout.contentContainer.Add(choiceName);
         narrativePathCheckboxesSetup();
+        foldout.contentContainer.Add(choicePoints);
         foldout.contentContainer.Add(conformField);
         foldout.contentContainer.Add(rebelField);
+        foldout.contentContainer.Add(resetField);
+        foldout.contentContainer.Add(preserveField);
 
         foldout.SetEnabled(false);
     }
@@ -349,6 +361,11 @@ public class DialogNode: Node
     private void setChoiceOutcome(MouseUpEvent e, ChoiceData choiceData) 
     {
         choiceData.WasMade = makesChoice.value;
+    }
+    //!Ustawia wagę wyboru.
+    private void setChoicePoints(InputEvent e, ChoiceData choiceData)
+    {
+        choiceData.ChoicePoints = int.Parse(choicePoints.value);
     }
     //!Ustawia wymagania wyboru co do sprzyjania.
     private void setConformRequirement(InputEvent e, ChoiceData choiceData)

@@ -17,7 +17,6 @@ public class SaveData
 
     public SaveData()
     {
-        //PlayerStats = new CharacterStats();
         PastChoices = new List<ChoiceData>();
         LastLocation = "MainScene";
         DialogPosition = "0";
@@ -29,7 +28,6 @@ public class SaveData
 
     public SaveData(string lastLocation, string dialogPosition)
     {
-        //PlayerStats = new CharacterStats();
         PastChoices = new List<ChoiceData>();
         LastLocation = lastLocation;
         DialogPosition = dialogPosition;

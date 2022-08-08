@@ -34,10 +34,10 @@ public class DialogController : MonoBehaviour
     void Update()
     {
         //if (Input.GetButtonDown("Submit") || isDisplayingEnding) //Sprawdzanie czy gracz wszczyna dialog.
-        if(dialogBox.text == "Dummy text.")
+        if(justLoaded && isDisplayingEnding)
         {
             justLoaded = false;
-            //startDialog();
+            startDialog();
         }
     }
     //!Zaczyna dialog tylko wtedy gdy gracz jest w zasiegu postaci niezależnej lub gdy odbywa się sekwencja zakończenia gry.
@@ -52,26 +52,21 @@ public class DialogController : MonoBehaviour
         }
     }
    
-    ////!Przygotowuje do wyświetlania obecnej kwestii dialogowej.
+    //!Przygotowuje do wyświetlania obecnej kwestii dialogowej.
     private void displayNextDialog() 
     {
+        if (currentNode.IsEnding) //Wszczyna sekwencję zakończenia jeżeli dialog ma ustawioną odpowiednią flagę.
+        {
+            saveDataController.loadEnding();
+            return;
+        }
         if (currentNode == null)
             return;
         dialogBox.text = "";
-        //dialogBox.text = currentNode.DialogLine;
         saveDataController.DialogPosition = currentNode.Guid;
-        //currentCharacter = Resources.Load<UnityEditor.U2D.Animation.CharacterData>("Dialogs/Character_data/" + currentNode.Speaker);
-        //if (currentCharacter)
-        //{
-        //    speaker.text = currentCharacter.Name;
-        //    icon.sprite = currentCharacter.Icon;
-        //    dialogLine.color = currentCharacter.TextColor;
-        //}
         StartCoroutine("typeText");
 
-        if (currentNode.IsEnding) //Wszczyna sekwencję zakończenia jeżeli dialog ma ustawiona odpowiednią flagę.
-            saveDataController.loadEnding();
-        else if (currentNode.IsLeaf) //Przygotowuje do zakończenia dialogu.
+        if (currentNode.IsLeaf) //Przygotowuje do zakończenia dialogu.
         {
             choiceButtons[0].gameObject.SetActive(true);
             choiceButtons[0].GetComponentInChildren<TMPro.TextMeshProUGUI>().text = currentNode.ExitLine;
@@ -89,9 +84,11 @@ public class DialogController : MonoBehaviour
     //!Wywoływana po naciśnięciu przycisku z odpowiedzią. Zapisuje wybór jeżeli takowy istnieje oraz przygotowuje kolejny węzeł dialogu.
     public void makeChoice(int i) 
     {
+        bool isEnding = false;
         if (currentNode.IsChoice)
-            saveDataController.saveChoice(currentNode, i);
+            isEnding = saveDataController.saveChoice(currentNode, i);
         currentNode = currentTree.getNode(currentNode.OutputPorts[i].TargetGuid);
+        currentNode.IsEnding = isEnding;
         displayNextDialog();
     }
     //!Kończy dialog.
@@ -99,7 +96,7 @@ public class DialogController : MonoBehaviour
     {
         if (isDisplayingEnding)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("MainMenuScene");
             return;
         }
     }
@@ -112,7 +109,7 @@ public class DialogController : MonoBehaviour
         }
         displayNextDialog();
     }
-    //!Przygotowuje kolkejne drzewo dialogowe.
+    //!Przygotowuje kolejne drzewo dialogowe.
     private void getNextTree() 
     {
         if (dialogTrees.Count != 0)
@@ -133,6 +130,7 @@ public class DialogController : MonoBehaviour
     public void setEndingDialog(DialogContainer endingDialog) 
     {
         dialogTrees.Add(endingDialog);
+        getNextTree();
         isDisplayingEnding = true;
     }
     //!Wyświetla tekst dialogu litera po literze.

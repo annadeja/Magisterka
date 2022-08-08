@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 //!Skrypt obsługujący menu główne.
 public class MainMenuController : MenuController
 {
-    [Header("UI elements")] //Elementu UI menu głównego.
+    [Header("UI elements")] //Elementy UI menu głównego.
     [SerializeField] private GameObject mainCanvas;
     [SerializeField] private Button backButton;
+    [SerializeField] private TMPro.TextMeshProUGUI saveLocation;
+    [Header("Miscellaneous")] //Elementy dodatkowe
+    [SerializeField] private DialogContainer mainTree;
 
     void Start()
     {
@@ -17,6 +20,7 @@ public class MainMenuController : MenuController
     public void newGame() 
     {
         currentSave = new SaveData();
+        currentSave.DialogPosition = mainTree.FirstNodeGuid;
         string filePath = Application.persistentDataPath + "/" + " " + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
         saveDataController.FilePath = filePath;
         saveDataController.LoadedSave = currentSave;
@@ -31,6 +35,7 @@ public class MainMenuController : MenuController
         base.loadGame();
         mainCanvas.SetActive(false);
         backButton.gameObject.SetActive(true);
+        saveLocation.text = "Saves located in " + Application.persistentDataPath;
     }
     //!Wraca do menu głównego z podmenu ładowania zapisów gry.
     public override void backToMainMenu(GameObject currentCanvas) 
