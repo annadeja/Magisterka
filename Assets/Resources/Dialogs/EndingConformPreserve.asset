@@ -27,11 +27,12 @@ MonoBehaviour:
     TargetGuid: 0b86ce98-5fdd-4113-a12b-a9d079b0de06
   NodeData:
   - Guid: f40eb68e-c9ee-40a2-97c3-e2532fb49b36
-    DialogLine: Indeed, the weightless never comes. Instead, you feel your body becoming
-      more corporeal, more solid, more real with each passing second. It is only
-      now that it comes to your attention how light you previously felt. You realize
-      that the body you now inhabit is unfamiliar. Just a moment ago you were a gray
-      blob, but never registered it. Or perhaps you did not want to.
+    DialogLine: Indeed, the weightlessness never comes. Instead, you feel your body
+      becoming more corporeal, more solid, more real with each passing second. It
+      is only now that it comes to your attention how light you previously felt.
+      You realize that the body you now inhabit is unfamiliar. Just a moment ago
+      you were a gray blob, but never registered it. Or perhaps you did not want
+      to.
     Speaker: Narrator
     ExitLine: 
     Position: {x: 3001, y: 200}

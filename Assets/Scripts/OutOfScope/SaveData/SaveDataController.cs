@@ -112,6 +112,9 @@ public class SaveDataController : MonoBehaviour
     //!Wczytuje sekwencję zakończenia gry.
     public void loadEnding()
     {
+        updateSaveData();
+        FilePath = Application.persistentDataPath + "/" + " " + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + "ENDING.save";
+        saveToFile();
         SceneManager.LoadScene("EndingScene");
     }
 }

@@ -64,6 +64,7 @@ public class DialogController : MonoBehaviour
             return;
         dialogBox.text = "";
         saveDataController.DialogPosition = currentNode.Guid;
+        saveDataController.LoadedSave.NodeSequence.Add(currentNode.Guid);
         StartCoroutine("typeText");
 
         if (currentNode.IsLeaf) //Przygotowuje do zakończenia dialogu.
@@ -140,7 +141,7 @@ public class DialogController : MonoBehaviour
             button.gameObject.SetActive(false);
         foreach (char character in currentNode.DialogLine.ToCharArray())
         {
-            if ((Input.GetMouseButton(0) || Input.GetButtonDown("Submit")) && !isDisplayingEnding)
+            if ((Input.GetMouseButton(0) || Input.GetButtonDown("Submit")))
             {
                 dialogBox.text = currentNode.DialogLine;
                 yield break;

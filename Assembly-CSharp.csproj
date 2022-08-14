@@ -61,7 +61,7 @@
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeDataContainer.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NarrativePath.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\GraphIO.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\SaveData\CharacterData.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\DialogData\CharacterData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeConnection.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeGraph.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogController.cs" />
@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeView.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogNode.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\Menus\GameplayMenuController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataExtractor.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataController.cs" />
   </ItemGroup>
   <ItemGroup>
