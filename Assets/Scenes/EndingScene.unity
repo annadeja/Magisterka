@@ -822,6 +822,9 @@ MonoBehaviour:
   - {fileID: 781927048}
   - {fileID: 33675257}
   dialogTrees: []
+  neuralNetworkController: {fileID: 0}
+  highlightedChoiceMaterial: {fileID: 2180264, guid: 5d9f5eecc95297a4398123ebbad10b52, type: 2}
+  defaultMaterial: {fileID: 2180264, guid: e4cac7ee2f86cf44e91f0e40ceab4730, type: 2}
 --- !u!4 &603676860
 Transform:
   m_ObjectHideFlags: 0

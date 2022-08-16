@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -15,13 +16,14 @@ public class MainMenuController : MenuController
     void Start()
     {
         saveDataController = SaveDataController.getInstance();
+        Directory.CreateDirectory(Application.persistentDataPath + "/EndingSaves");
     }
     //!Tworzy nowy zapis gry.
     public void newGame() 
     {
         currentSave = new SaveData();
         currentSave.DialogPosition = mainTree.FirstNodeGuid;
-        string filePath = Application.persistentDataPath + "/" + " " + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
+        string filePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
         saveDataController.FilePath = filePath;
         saveDataController.LoadedSave = currentSave;
         saveDataController.saveToFile();

@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class SaveData 
 {
-    public List<string> NodeSequence { set; get; } //!Sekwencja wszystkich węzłów dialogowych wybranych przez gracza.
+    public string NodeSequence { set; get; } //!Sekwencja wszystkich węzłów dialogowych wybranych przez gracza.
     public List<ChoiceData> PastChoices { set; get; } //!<Lista znaczących wyborów gracza.
     public string LastLocation { set; get; } //!<Scena w jakiej ostatnio przebywał gracz.
     public string DialogPosition { set; get; } //!<Klasa Vector3 nie jest serializowalna, stąd pozycję gracza przechowuje się w postaci tablicy.
@@ -17,7 +17,7 @@ public class SaveData
 
     public SaveData()
     {
-        NodeSequence = new List<string>();
+        NodeSequence = "";
         PastChoices = new List<ChoiceData>();
         LastLocation = "MainScene";
         DialogPosition = "0";
@@ -29,7 +29,7 @@ public class SaveData
 
     public SaveData(string lastLocation, string dialogPosition)
     {
-        NodeSequence = new List<string>();
+        NodeSequence = "";
         PastChoices = new List<ChoiceData>();
         LastLocation = lastLocation;
         DialogPosition = dialogPosition;

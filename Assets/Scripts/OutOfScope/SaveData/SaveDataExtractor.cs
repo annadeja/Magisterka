@@ -16,13 +16,13 @@ public class SaveDataExtractor : MonoBehaviour
     public void extractSaveData()
     {
         StringBuilder stringBuilder = new StringBuilder();
-        string line;
-        foreach(string filePath in Directory.GetFiles(@Application.persistentDataPath, "*ENDING.save"))
+        //string line;
+        foreach(string filePath in Directory.GetFiles(@Application.persistentDataPath + "/EndingSaves/", "*ENDING.save"))
         {
             saveDataController.FilePath = filePath;
             saveDataController.loadSaveFile();
-            line = string.Join(", ", saveDataController.LoadedSave.NodeSequence);
-            stringBuilder.AppendLine(line);
+            //line = string.Join(", ", saveDataController.LoadedSave.NodeSequence);
+            stringBuilder.AppendLine(saveDataController.LoadedSave.NodeSequence);
         }
         File.WriteAllText("F:\\Magisterka\\SaveData.csv", stringBuilder.ToString());
     }

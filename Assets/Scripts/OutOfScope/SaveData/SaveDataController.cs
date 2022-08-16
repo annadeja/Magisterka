@@ -72,6 +72,15 @@ public class SaveDataController : MonoBehaviour
         DialogPosition = LoadedSave.DialogPosition;
         justLoaded = true;
     }
+    public void compareToNeuralNetworkChoice(bool agreedWithNeuralNetwork, bool predictedAvailableChoice)
+    {
+        if (!predictedAvailableChoice)
+            return;
+        if (agreedWithNeuralNetwork)
+            LoadedSave.ConformChoices++;
+        else
+            LoadedSave.RebelChoices++;
+    }
     //!Zapisuje pojedynczy wybór gracza.
     public bool saveChoice(NodeDataContainer currentNode, int i) 
     {
@@ -113,7 +122,7 @@ public class SaveDataController : MonoBehaviour
     public void loadEnding()
     {
         updateSaveData();
-        FilePath = Application.persistentDataPath + "/" + " " + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + "ENDING.save";
+        FilePath = Application.persistentDataPath + "/EndingSaves/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + " ENDING.save";
         saveToFile();
         SceneManager.LoadScene("EndingScene");
     }

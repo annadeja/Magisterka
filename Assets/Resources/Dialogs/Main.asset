@@ -316,30 +316,6 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
-  - Guid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
-    DialogLine: You enter a room with both its walls and floor covered in ceramic
-      tiles. A pure white seat bares its jaw, as if demanding to be called a "throne".
-      A lone sink hangs from a perpendicular wall, only a towel and a bottle of soap
-      keeping it company. You can see a strange mark on the wall right above, as
-      if something has been hanging there, but was taken away. The less sophisticated
-      could call this place a "crapper". You are one of those people.
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 10133, y: -34}
-    OutputPorts:
-    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
-      PortName: Exit the crapper.
-      TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
-    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
-      PortName: Use the toilet.
-      TargetGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
-    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
-      PortName: Wash your hands.
-      TargetGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
   - Guid: dd6c6efb-2f0d-4619-a6b1-02ba0da9547d
     DialogLine: You flushed the toilet.
     Speaker: Narrator
@@ -738,27 +714,6 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
-  - Guid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
-    DialogLine: You wake up in a dark room, alight with red coming through the small
-      slits of the window blinds. The dark chamber you find yourself in resembles
-      a hotel room kitchenette, only without the rest of the room. Except for the
-      window, there is only one entrance. You slowly stand up from a chair you find
-      yourself seated in and shake off the grogginess. You head throbs, as though
-      someone hit it with a baseball bat. What do you do?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 336, y: 200}
-    OutputPorts:
-    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
-      PortName: Try seeing out the window.
-      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
-    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
-      PortName: Examine the room for food.
-      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
   - Guid: f7b58910-7d10-49b3-b471-c669538110c7
     DialogLine: Going around this, for the lack of a better term, place has made
       you a bit tired. Having a nap does not seem like the worst idea right now and
@@ -767,7 +722,7 @@ MonoBehaviour:
       plopped into, one that may very well seem to be devoid of other people, but
       does in fact contain someone out to get you and- Your drowsiness however overrides
       that train of thought and makes it clear that if you decide to plunge in, you
-      might not wake up for long.EXT.
+      might not wake up for long.
     Speaker: Narrator
     ExitLine: 
     Position: {x: 12393, y: 736}
@@ -802,6 +757,30 @@ MonoBehaviour:
       RequiredRebel: 0
       RequiredReset: 1
       RequiredPreserve: 1
+  - Guid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+    DialogLine: You enter a room with both its walls and floor covered in ceramic
+      tiles. A pure white seat bares its jaw, as if demanding to be called a "throne".
+      A lone sink hangs from a perpendicular wall, only a towel and a bottle of soap
+      keeping it company. You can see a strange mark on the wall right above, as
+      if something has been hanging there, but was taken away. The less sophisticated
+      could call this place a "crapper". You are one of those people.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 10133, y: -34}
+    OutputPorts:
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Exit the crapper.
+      TargetGuid: 68a0df30-90a5-4892-9af3-5ac724d9d929
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Use the toilet.
+      TargetGuid: 2220fbb4-f27b-4a47-a521-041934d1226d
+    - NodeGuid: fbca1907-2e3b-4d9d-bef3-716f14f0aa6e
+      PortName: Wash your hands.
+      TargetGuid: 1ecd03b2-4105-41ec-b820-8e39b097e983
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
   - Guid: eb82050e-4ff3-4d2e-b647-33743e71692f
     DialogLine: As you sit down on the bed you fail to find a decent enough reason
       as to why you should be lying around in bed while you have not actually done
@@ -816,6 +795,28 @@ MonoBehaviour:
     - NodeGuid: eb82050e-4ff3-4d2e-b647-33743e71692f
       PortName: Step back.
       TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+    DialogLine: You wake up in a dark room, alight with red coming through the small
+      slits of the window blinds. The dark chamber you find yourself in resembles
+      a hotel room kitchenette, only without the rest of the room. Except for the
+      window, there is only one entrance. You slowly stand up from a chair you find
+      yourself seated in and shake off the grogginess. You head throbs, as though
+      someone hit it with a baseball bat, which seems to warn you that some of your
+      actions may feel... sluggish. What do you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: -30, y: 200}
+    OutputPorts:
+    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+      PortName: Try seeing out the window.
+      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
+      PortName: Examine the room for food.
+      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
     IsChoice: 0
     IsLeaf: 0
     IsEnding: 0

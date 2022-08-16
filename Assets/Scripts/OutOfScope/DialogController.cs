@@ -15,10 +15,15 @@ public class DialogController : MonoBehaviour
     [SerializeField] private List<DialogContainer> dialogTrees; //!<Lista przechowująca drzewa dialogowe.
     private DialogContainer currentTree; //!<Obecnie załadowane drzewo.
     private NodeDataContainer currentNode; //!<Obecnie załadowany węzeł.
+    private string predictedGuid = "";
+    private bool predictedAvailableChoice = false;
 
     private bool justLoaded = true;
     private bool isDisplayingEnding = false; //!<Czy wyświetlana jest sekwencja zakończenia?
     private SaveDataController saveDataController; //!<Kontroler stanu gry.
+    [SerializeField] private NeuralNetworkController neuralNetworkController;
+    [SerializeField] private Material highlightedChoiceMaterial;
+    [SerializeField] private Material defaultMaterial;
 
     void Start()
     {
@@ -64,7 +69,7 @@ public class DialogController : MonoBehaviour
             return;
         dialogBox.text = "";
         saveDataController.DialogPosition = currentNode.Guid;
-        saveDataController.LoadedSave.NodeSequence.Add(currentNode.Guid);
+        saveDataController.LoadedSave.NodeSequence+=currentNode.Guid + " ";
         StartCoroutine("typeText");
 
         if (currentNode.IsLeaf) //Przygotowuje do zakończenia dialogu.
@@ -76,18 +81,36 @@ public class DialogController : MonoBehaviour
             return;
         }
         else //Domyślny przypadek, zakłada dalszą kontynuację dialogu.
+        {
+            predictedGuid = "";
+            if (currentNode.OutputPorts.Count > 1 && !isDisplayingEnding)
+                predictedGuid = neuralNetworkController.predictNextChoice(saveDataController.LoadedSave.NodeSequence);
+            predictedAvailableChoice = false;
             for (int i = 0; i < currentNode.OutputPorts.Count; i++)
             {
                 choiceButtons[i].gameObject.SetActive(true);
                 choiceButtons[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().text = currentNode.OutputPorts[i].PortName;
+                if (currentNode.OutputPorts[i].TargetGuid == predictedGuid)
+                {
+                    choiceButtons[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().fontMaterial = highlightedChoiceMaterial;
+                    //Debug.Log(currentNode.OutputPorts[i].PortName);
+                    predictedAvailableChoice = true;
+                }
+                else
+                    choiceButtons[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().fontMaterial = defaultMaterial;
             }
+        }
     }
     //!Wywoływana po naciśnięciu przycisku z odpowiedzią. Zapisuje wybór jeżeli takowy istnieje oraz przygotowuje kolejny węzeł dialogu.
     public void makeChoice(int i) 
     {
         bool isEnding = false;
+        bool agreedWithNeuralNetwork = false;
+        if (predictedGuid == currentNode.OutputPorts[i].TargetGuid)
+            agreedWithNeuralNetwork = true;
         if (currentNode.IsChoice)
             isEnding = saveDataController.saveChoice(currentNode, i);
+        saveDataController.compareToNeuralNetworkChoice(agreedWithNeuralNetwork, predictedAvailableChoice);
         currentNode = currentTree.getNode(currentNode.OutputPorts[i].TargetGuid);
         currentNode.IsEnding = isEnding;
         displayNextDialog();
