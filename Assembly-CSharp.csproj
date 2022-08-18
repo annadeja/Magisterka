@@ -57,20 +57,19 @@
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\ChoiceData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\Menus\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogContainer.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\EndingController.cs" />
+    <Compile Include="Assets\Scripts\OutOfScope\SceneControllers\EndingController.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeDataContainer.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NarrativePath.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\GraphIO.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogData\CharacterData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\NodeConnection.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeGraph.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\DialogController.cs" />
+    <Compile Include="Assets\Scripts\InScope\SceneControllers\DialogController.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveData.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogGraph\DialogNodeView.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\DialogData\DialogNode.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\Menus\GameplayMenuController.cs" />
-    <Compile Include="Assets\Scripts\InScope\NeuralNetworkController.cs" />
-    <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataExtractor.cs" />
+    <Compile Include="Assets\Scripts\InScope\NN-Adjacent\NeuralNetworkController.cs" />
+    <Compile Include="Assets\Scripts\InScope\NN-Adjacent\SaveDataExtractor.cs" />
     <Compile Include="Assets\Scripts\OutOfScope\SaveData\SaveDataController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -775,8 +774,8 @@
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Scripting.Python.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Scripting.Python.Editor.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
@@ -802,11 +801,11 @@
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -838,8 +837,8 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
@@ -849,9 +848,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>

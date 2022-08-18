@@ -163,20 +163,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.scripting.python": {
-      "version": "5.0.0-pre.5",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.scripting.python.windows": {
-      "version": "1.2.0-pre.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.services.core": {
       "version": "1.4.0",
       "depth": 1,

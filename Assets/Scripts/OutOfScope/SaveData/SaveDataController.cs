@@ -68,10 +68,10 @@ public class SaveDataController : MonoBehaviour
     //!Wczytuje zapis gry.
     public void load() 
     {
-        //SceneManager.LoadScene(LoadedSave.LastLocation);
         DialogPosition = LoadedSave.DialogPosition;
         justLoaded = true;
     }
+    //!Sprawdza czy wybór gracza pokrywa się z wyborem przewidzianym przez sieć neuronową i przyznaje graczowi odpowiednie punkty.
     public void compareToNeuralNetworkChoice(bool agreedWithNeuralNetwork, bool predictedAvailableChoice)
     {
         if (!predictedAvailableChoice)
@@ -86,7 +86,6 @@ public class SaveDataController : MonoBehaviour
     {
         string portName = currentNode.OutputPorts[i].PortName;
         ChoiceData choiceData = currentNode.ChoiceOutcomes.Find(x => x.PortName == portName);
-        //choiceData.skillCheck(LoadedSave.PlayerStats);
         skillCheck(choiceData);
         if (!choiceData.WasFailed && choiceData.ChoiceTitle == "Ending")
             return true;

@@ -203,82 +203,6 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
-  - Guid: c552d89b-a012-4f78-8324-dd358fac5e53
-    DialogLine: The room remains creepy. What will you do?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 4348, y: 167}
-    OutputPorts:
-    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
-      PortName: Try seeing out the window.
-      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
-    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
-      PortName: Examine the room for food.
-      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
-    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
-      PortName: Exit out the door.
-      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
-  - Guid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-    DialogLine: You find yourself in the middle of a long corridor. As you look around,
-      each end seems to be too dark to discern what lies ahead. Where will you go?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 5049, y: 224}
-    OutputPorts:
-    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-      PortName: Go left.
-      TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
-    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-      PortName: Go right.
-      TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
-  - Guid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
-    DialogLine: You come across two doors - one open, one seemingly closed. The closed
-      door appears to have a sign attached to it. What will you do?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 6236, y: -10}
-    OutputPorts:
-    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
-      PortName: Go back.
-      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
-      PortName: Enter through the open door.
-      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
-    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
-      PortName: Examine the sign.
-      TargetGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
-  - Guid: 9f5208d2-1a0c-4876-9747-55749849a3ec
-    DialogLine: The corridor seems to lighten up as you continue walking, despite
-      no lamps or windows being present. Eventually, you reach the end only to find
-      a single door. Despite being closed, you cannot shake off the feeling that
-      it is in fact the source of the light present in the corridor. This door beckons
-      you.
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 6236, y: 482}
-    OutputPorts:
-    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
-      PortName: Go back.
-      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
-    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
-      PortName: Open the door.
-      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
-    IsChoice: 0
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes: []
   - Guid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
     DialogLine: As you get closer, you start to make out the sign. It features a
       circle and an inverted triangle right next to each other. You have no idea
@@ -537,62 +461,6 @@ MonoBehaviour:
       RequiredRebel: 0
       RequiredReset: 0
       RequiredPreserve: 0
-  - Guid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-    DialogLine: As you approach the bookshelf you expect to be hit with a vile cloud
-      of grime. To your surprise however, the shelves seem to be ostensibly spotless.
-      You check the titles lining the shelves. You would expect an assortment comprised
-      of classical literature with encyclopedias and other non-fiction sprinkled
-      in. Instead of that, the spine of each book is labelled with titles befitting
-      the most masterful of clickbait sites, of which at least 10 you suspect are
-      about strangely shaped cakes. Two titles seem to catch your eye. Which do you
-      choose?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 9989, y: -1101}
-    OutputPorts:
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: Step back.
-      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: '"What the Government Doesn''t Want You to Know About Space"'
-      TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
-      TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
-    IsChoice: 1
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes:
-    - PortName: Step back.
-      ChoiceTitle: Sample choice
-      WasMade: 0
-      WasFailed: 0
-      Path: 4
-      ChoicePoints: 0
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
-    - PortName: '"What the Government Doesn''t Want You to Know About Space"'
-      ChoiceTitle: Read the space book
-      WasMade: 1
-      WasFailed: 0
-      Path: 3
-      ChoicePoints: 1
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
-    - PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
-      ChoiceTitle: Read the tip book
-      WasMade: 1
-      WasFailed: 0
-      Path: 2
-      ChoicePoints: 1
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
   - Guid: cb963dda-be8b-42d6-8dfe-0ff396efae54
     DialogLine: You open up the laptop. A cloud of dust hits your face as lift the
       screen upwards, momentarily irritating your eyes. You try powering on the computer,
@@ -647,7 +515,7 @@ MonoBehaviour:
       RequiredPreserve: 0
   - Guid: 63eadc22-e967-47f9-a337-640414f23a9f
     DialogLine: You enter what appears to be some sort of a study. A dusty desk sits
-      in the middle of the room, accompanies by a dingy office chair. An old laptop
+      in the middle of the room, accompanied by a dingy office chair. An old laptop
       sits atop the desk, closed and unplugged. A bookshelf similarly caked with
       dust stands tall against the wall right behind the desk. The room seems to
       be devoid of any sort of ornamentation with its painfully beige walls and gray
@@ -799,6 +667,62 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
+  - Guid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    DialogLine: As you approach the bookshelf you expect to be hit with a vile cloud
+      of grime. To your surprise however, the shelves seem to be ostensibly spotless.
+      You check the titles lining the shelves. You would expect an assortment comprised
+      of classical literature with encyclopedias and other non-fiction sprinkled
+      in. Instead of that, the spine of each book is labelled with titles befitting
+      the most masterful of clickbait sites, of which at least 10 you suspect are
+      about strangely shaped cakes. Two titles seem to catch your eye. Which do you
+      choose?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 9989, y: -1101}
+    OutputPorts:
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      ChoiceTitle: Read the space book
+      WasMade: 1
+      WasFailed: 0
+      Path: 3
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      ChoiceTitle: Read the tip book
+      WasMade: 1
+      WasFailed: 0
+      Path: 2
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
   - Guid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
     DialogLine: You wake up in a dark room, alight with red coming through the small
       slits of the window blinds. The dark chamber you find yourself in resembles
@@ -809,7 +733,7 @@ MonoBehaviour:
       actions may feel... sluggish. What do you do?
     Speaker: Narrator
     ExitLine: 
-    Position: {x: -30, y: 200}
+    Position: {x: 292, y: 200}
     OutputPorts:
     - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
       PortName: Try seeing out the window.
@@ -817,6 +741,86 @@ MonoBehaviour:
     - NodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
       PortName: Examine the room for food.
       TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    DialogLine: You find yourself in the middle of a long corridor. As you look around,
+      each end seems to be too dark to discern what lies ahead. And yet... something
+      compells you to go in a specific direction. Where will you go?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 5028, y: 224}
+    OutputPorts:
+    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+      PortName: Go left.
+      TargetGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    - NodeGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+      PortName: Go right.
+      TargetGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+    DialogLine: You come across two doors - one open, one seemingly closed. The closed
+      door appears to have a sign attached to it. What will you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 6236, y: -143}
+    OutputPorts:
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Go back.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Enter through the open door.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 0ccad5e6-8506-45cc-8980-d9ec3a6eb731
+      PortName: Examine the sign.
+      TargetGuid: 273cb1e5-12e3-47b9-a555-b9574d3fafff
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+    DialogLine: The corridor seems to lighten up as you continue walking, despite
+      no lamps or windows being present. Eventually, you reach the end only to find
+      a single door. Despite being closed, you cannot shake off the feeling that
+      it is in fact the source of the light present in the corridor. This door beckons
+      you.
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 6236, y: 591}
+    OutputPorts:
+    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+      PortName: Go back.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
+    - NodeGuid: 9f5208d2-1a0c-4876-9747-55749849a3ec
+      PortName: Open the door.
+      TargetGuid: 9a871cb1-666f-42ed-8921-1dd693d146f0
+    IsChoice: 0
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes: []
+  - Guid: c552d89b-a012-4f78-8324-dd358fac5e53
+    DialogLine: You feel blood rushing to your head. You have only taken a step and
+      yet that simple action felt like an eternity. An eternity you have no recollection
+      of. You find it... unsettling. Regardless, you remain still in this creepy
+      room. What will you do?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 3415, y: 176}
+    OutputPorts:
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Try seeing out the window.
+      TargetGuid: de923007-ed1e-4de5-960f-9ca9b7f8de45
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Examine the room for food.
+      TargetGuid: 55c865ee-c650-4a5a-85e0-c64dd8a53247
+    - NodeGuid: c552d89b-a012-4f78-8324-dd358fac5e53
+      PortName: Exit out the door.
+      TargetGuid: 6b92beef-6f22-48f3-bae2-5156d6fa3536
     IsChoice: 0
     IsLeaf: 0
     IsEnding: 0

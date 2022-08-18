@@ -1,9 +1,7 @@
 ﻿#if UNITY_EDITOR
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 //!Klasa reprezentująca węzeł w edytorze grafów.
@@ -106,7 +104,6 @@ public class DialogNode: Node
                 portControlsSetup(port);
                 IsLeaf = false;
                 isLeafToggle.value = false;
-                //isLeafToggle.SetEnabled(false);
                 IsEnding = false;
                 isEndingToggle.value = false;
                 isEndingToggle.SetEnabled(false);

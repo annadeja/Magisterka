@@ -3,7 +3,7 @@ using System.Linq;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-//!Skrypt obs³uguj¹cy menu g³ówne.
+//!Skrypt bazowy dla kontrolerów obs³uguj¹cych menu.
 public class MenuController : MonoBehaviour
 {
     [Header("UI elements")] //Elementu UI menu g³ównego.
@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
     protected SaveData currentSave; //!<Obecny zapis gry.
     protected List<string> saveFileNames; //!<Nazwy plików zapisu.
     protected int page = 0; //!<Numer strony zapisów w podmenu ³adowania gry.
-    protected bool isSave = false;
+    protected bool isSave = false; //!<Czy jest to menu, w którym mo¿na zapisaæ grê?
 
     void Start()
     {
@@ -25,7 +25,6 @@ public class MenuController : MonoBehaviour
     //!Przechodzi do podmenu ³adowania zapisów gry.
     public virtual void loadGame()
     {
-        //Debug.Log(Application.persistentDataPath);
         loadGameCanvas.SetActive(true);
         saveFileNames = Directory.EnumerateFiles(Application.persistentDataPath, "*.save").ToList();
         showSaves();
@@ -105,5 +104,4 @@ public class MenuController : MonoBehaviour
     {
         currentCanvas.SetActive(false);
     }
-
 }

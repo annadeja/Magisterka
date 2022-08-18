@@ -9,7 +9,7 @@ public class SaveData
     public string NodeSequence { set; get; } //!Sekwencja wszystkich węzłów dialogowych wybranych przez gracza.
     public List<ChoiceData> PastChoices { set; get; } //!<Lista znaczących wyborów gracza.
     public string LastLocation { set; get; } //!<Scena w jakiej ostatnio przebywał gracz.
-    public string DialogPosition { set; get; } //!<Klasa Vector3 nie jest serializowalna, stąd pozycję gracza przechowuje się w postaci tablicy.
+    public string DialogPosition { set; get; } //!<Pole przechowujące pozycję gracza w głównym drzewie dialogowym.
     public int ConformChoices { set; get; } //!<Pole określające liczbę wyborów w danej ścieżce.
     public int RebelChoices { set; get; } //!<Pole określające liczbę wyborów w danej ścieżce.
     public int ResetChoices { set; get; } //!<Pole określające liczbę wyborów w danej ścieżce.

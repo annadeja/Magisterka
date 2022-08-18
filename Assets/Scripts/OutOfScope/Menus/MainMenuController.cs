@@ -11,7 +11,7 @@ public class MainMenuController : MenuController
     [SerializeField] private Button backButton;
     [SerializeField] private TMPro.TextMeshProUGUI saveLocation;
     [Header("Miscellaneous")] //Elementy dodatkowe
-    [SerializeField] private DialogContainer mainTree;
+    [SerializeField] private DialogContainer mainTree; //!<Główne drzewo dialogowe gry.
 
     void Start()
     {
@@ -45,7 +45,7 @@ public class MainMenuController : MenuController
         base.backToMainMenu(currentCanvas);
         mainCanvas.SetActive(true);
     }
-
+    //!Ładuje zapis gry.
     public override void loadSave(Button button)
     {
         base.loadSave(button);

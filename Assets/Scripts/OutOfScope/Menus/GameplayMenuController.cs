@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+//!Skrypt obs³uguj¹cy menu dostêpne podczas rozgrywki.
 public class GameplayMenuController : MenuController
 {
     void Start()
@@ -13,7 +13,7 @@ public class GameplayMenuController : MenuController
     {
         if (!isSave)
             return;
-        if (button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text.Equals("New save"))
+        if (button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text.Equals("New save")) //Sprawdza czy gracz tworzy nowy zapis gry.
         {
             saveDataController.FilePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
         }
@@ -24,6 +24,7 @@ public class GameplayMenuController : MenuController
         saveDataController.saveToFile();
         backToMainMenu(loadGameCanvas);
     }
+    //!W³¹cza lub wy³¹cza menu zapisu gry.
     public void saveGame()
     {
         if (loadGameCanvas.activeSelf && isSave)
@@ -53,7 +54,7 @@ public class GameplayMenuController : MenuController
     {
         base.backToMainMenu(currentCanvas);
     }
-
+    //!£aduje zapis gry.
     public override void loadSave(Button button)
     {
         base.loadSave(button);
