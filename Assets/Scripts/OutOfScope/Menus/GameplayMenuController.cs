@@ -15,7 +15,7 @@ public class GameplayMenuController : MenuController
             return;
         if (button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text.Equals("New save")) //Sprawdza czy gracz tworzy nowy zapis gry.
         {
-            saveDataController.FilePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
+            saveDataController.FilePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd.MM.yyyy hh.mm.ss tt") + ".save";
         }
         else
             saveDataController.FilePath = Application.persistentDataPath + "/" + button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text + ".save";

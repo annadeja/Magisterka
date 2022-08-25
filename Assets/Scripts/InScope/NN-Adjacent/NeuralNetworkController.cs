@@ -9,7 +9,7 @@ public class NeuralNetworkController : MonoBehaviour
     private string modelPath; //!<Przechowuje œcie¿kê do zapisanego modelu sieci neuronowej.
     private string tokenizerPath; //!<Przechowuje œcie¿kê do zapisanego w postaci pliku JSON obiektu klasy Tokenizer, przechowuj¹cego s³ownik wszystkich GUID.
     private int lineAmount = 4; //<!Eksperymentalnie wyznaczona wartoœæ okreœlaj¹ca ile linii wczytaæ z danych wyjœciowych skryptu by otrzymaæ GUID.
-    private string[] packages = {"numpy", "tensorflow==2.8.0" };
+    private string[] packages = {"numpy", "tensorflow==2.8.0", "protobuf==3.20.0" };
 
     // Start is called before the first frame update
     void Start()

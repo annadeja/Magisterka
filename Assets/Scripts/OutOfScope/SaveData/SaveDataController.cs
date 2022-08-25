@@ -121,7 +121,7 @@ public class SaveDataController : MonoBehaviour
     public void loadEnding()
     {
         updateSaveData();
-        FilePath = Application.persistentDataPath + "/EndingSaves/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + " ENDING.save";
+        FilePath = Application.persistentDataPath + "/EndingSaves/" + DateTime.Now.ToString("dd.MM.yyyy hh.mm.ss tt") + " ENDING.save";
         saveToFile();
         SceneManager.LoadScene("EndingScene");
     }

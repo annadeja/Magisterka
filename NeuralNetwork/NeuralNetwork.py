@@ -5,8 +5,7 @@ import numpy as np
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from csv import reader
-from keras import backend
-from tensorflow.keras import regularizers
+from tensorflow.keras import regularizers, backend
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.text import Tokenizer

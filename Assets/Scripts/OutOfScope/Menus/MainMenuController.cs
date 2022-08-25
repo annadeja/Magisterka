@@ -23,7 +23,7 @@ public class MainMenuController : MenuController
     {
         currentSave = new SaveData();
         currentSave.DialogPosition = mainTree.FirstNodeGuid;
-        string filePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd/MM/yyyy hh/mm/ss tt") + ".save";
+        string filePath = Application.persistentDataPath + "/" + DateTime.Now.ToString("dd.MM.yyyy hh.mm.ss tt") + ".save";
         saveDataController.FilePath = filePath;
         saveDataController.LoadedSave = currentSave;
         saveDataController.saveToFile();
