@@ -462,10 +462,10 @@ MonoBehaviour:
       RequiredReset: 0
       RequiredPreserve: 0
   - Guid: cb963dda-be8b-42d6-8dfe-0ff396efae54
-    DialogLine: You open up the laptop. A cloud of dust hits your face as lift the
-      screen upwards, momentarily irritating your eyes. You try powering on the computer,
-      but to no avail, the battery seems to be flat. You wonder about how to go about
-      accessing the treasures that might lie inside.
+    DialogLine: You open up the laptop. A cloud of dust hits your face as you lift
+      the screen upwards, momentarily irritating your eyes. You try powering on the
+      computer, but to no avail, the battery seems to be flat. You wonder about how
+      to go about accessing the treasures that might lie inside.
     Speaker: Narrator
     ExitLine: 
     Position: {x: 10079, y: -353}
@@ -667,62 +667,6 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
-  - Guid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-    DialogLine: As you approach the bookshelf you expect to be hit with a vile cloud
-      of grime. To your surprise however, the shelves seem to be ostensibly spotless.
-      You check the titles lining the shelves. You would expect an assortment comprised
-      of classical literature with encyclopedias and other non-fiction sprinkled
-      in. Instead of that, the spine of each book is labelled with titles befitting
-      the most masterful of clickbait sites, of which at least 10 you suspect are
-      about strangely shaped cakes. Two titles seem to catch your eye. Which do you
-      choose?
-    Speaker: Narrator
-    ExitLine: 
-    Position: {x: 9989, y: -1101}
-    OutputPorts:
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: Step back.
-      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: '"What the Government Doesn''t Want You to Know About Space"'
-      TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
-    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
-      PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
-      TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
-    IsChoice: 1
-    IsLeaf: 0
-    IsEnding: 0
-    ChoiceOutcomes:
-    - PortName: Step back.
-      ChoiceTitle: Sample choice
-      WasMade: 0
-      WasFailed: 0
-      Path: 4
-      ChoicePoints: 0
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
-    - PortName: '"What the Government Doesn''t Want You to Know About Space"'
-      ChoiceTitle: Read the space book
-      WasMade: 1
-      WasFailed: 0
-      Path: 3
-      ChoicePoints: 1
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
-    - PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
-      ChoiceTitle: Read the tip book
-      WasMade: 1
-      WasFailed: 0
-      Path: 2
-      ChoicePoints: 1
-      RequiredConform: 0
-      RequiredRebel: 0
-      RequiredReset: 0
-      RequiredPreserve: 0
   - Guid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b
     DialogLine: You wake up in a dark room, alight with red coming through the small
       slits of the window blinds. The dark chamber you find yourself in resembles
@@ -825,4 +769,60 @@ MonoBehaviour:
     IsLeaf: 0
     IsEnding: 0
     ChoiceOutcomes: []
+  - Guid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+    DialogLine: As you approach the bookshelf you expect to be hit with a vile cloud
+      of grime. To your surprise however, the shelves seem to be ostensibly spotless.
+      You check the titles lining the shelves. You would expect an assortment comprised
+      of classical literature with encyclopedias and other non-fiction sprinkled
+      in. Instead of that, the spine of each book is labelled with titles befitting
+      the most masterful of clickbait sites, of which at least 10 you suspect are
+      about strangely shaped cakes. Two titles seem to catch your eye. Which do you
+      choose?
+    Speaker: Narrator
+    ExitLine: 
+    Position: {x: 9989, y: -1101}
+    OutputPorts:
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: Step back.
+      TargetGuid: 63eadc22-e967-47f9-a337-640414f23a9f
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      TargetGuid: 0f0d3baf-900c-41fa-92df-ca6e939276c5
+    - NodeGuid: 53f140a3-67dc-41b8-9cbf-2fc3b7cd9e68
+      PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      TargetGuid: 8eb441c8-2a16-4e48-a9a0-58f3983ccd56
+    IsChoice: 1
+    IsLeaf: 0
+    IsEnding: 0
+    ChoiceOutcomes:
+    - PortName: Step back.
+      ChoiceTitle: Sample choice
+      WasMade: 0
+      WasFailed: 0
+      Path: 4
+      ChoicePoints: 0
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"What the Government Doesn''t Want You to Know About Space"'
+      ChoiceTitle: Read the space book
+      WasMade: 1
+      WasFailed: 0
+      Path: 3
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
+    - PortName: '"13 Counterintuitive Tips for Crushing Your Health Goals"'
+      ChoiceTitle: Read the tip book
+      WasMade: 1
+      WasFailed: 0
+      Path: 2
+      ChoicePoints: 1
+      RequiredConform: 0
+      RequiredRebel: 0
+      RequiredReset: 0
+      RequiredPreserve: 0
   FirstNodeGuid: 6ff9ed28-41ec-4fd2-b342-5b87f1ae0c5b

@@ -13,13 +13,18 @@ public class SaveDataExtractor : MonoBehaviour
     //!Wydobywa dane niezbêdne do trenowania sieci neuronowej.
     public void extractNeuralNetworkData()
     {
-        StringBuilder stringBuilder = new StringBuilder();
-        foreach(string filePath in Directory.GetFiles(Application.persistentDataPath + "/EndingSaves/", "*ENDING.save"))
+        StringBuilder stringBuilderTraining = new StringBuilder();
+        StringBuilder stringBuilderAnalysis = new StringBuilder();
+        stringBuilderAnalysis.AppendLine("Reset;Preserve;Conform;Rebel");
+        foreach (string filePath in Directory.GetFiles(Application.persistentDataPath + "/EndingSaves/", "*ENDING.save"))
         {
             saveDataController.FilePath = filePath;
             saveDataController.loadSaveFile();
-            stringBuilder.AppendLine(saveDataController.LoadedSave.NodeSequence);
+            stringBuilderTraining.AppendLine(saveDataController.LoadedSave.NodeSequence);
+            stringBuilderAnalysis.AppendLine(string.Format("{0};{1};{2};{3}", saveDataController.LoadedSave.ResetChoices,
+                saveDataController.LoadedSave.PreserveChoices, saveDataController.LoadedSave.ConformChoices, saveDataController.LoadedSave.RebelChoices));
         }
-        File.WriteAllText("F:\\Magisterka\\Magisterka\\NeuralNetwork\\SaveData.csv", stringBuilder.ToString());
+        File.WriteAllText("F:\\Magisterka\\Magisterka\\NeuralNetwork\\SaveData.csv", stringBuilderTraining.ToString());
+        File.WriteAllText("F:\\Magisterka\\Magisterka\\NeuralNetwork\\AnalysisData.csv", stringBuilderAnalysis.ToString());
     }
 }
